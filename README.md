@@ -1,6 +1,6 @@
 # 32-bit Pipelined RISC-V Processor 🚀
 
-**Author:** Sourav  
+**Author:** Sourav Mandal
 **Language:** Verilog HDL  
 **Simulation Tool:** Xilinx Vivado  
 
@@ -28,7 +28,18 @@ To ensure pipeline efficiency and mathematical accuracy, a dedicated **Hazard Un
 * **Control Flushes:** When a branch instruction (e.g., `beq`) evaluates as true, the Hazard Unit instantly flushes the incorrectly fetched sequential instructions from the ID and EX stages to prevent erroneous execution.
 
 ---
+## ✅ Features
 
+- 5-stage pipelined architecture
+- RV32I instruction subset
+- Pipeline registers between all stages
+- Hazard detection unit
+- Data forwarding unit
+- Load-use stalling
+- Branch flushing
+- Separate instruction and data memories
+- Modular Verilog design
+- 
 ## 💻 Supported Instruction Set
 
 The processor currently supports a core subset of the 32-bit RISC-V base integer instruction set (RV32I):
@@ -49,7 +60,7 @@ The processor currently supports a core subset of the 32-bit RISC-V base integer
 
 ## 🛠️ Simulation & Testing
 
-The processor was verified using a custom Verilog testbench. The design was stressed against a specifically crafted machine code program (`program.hex`) designed to intentionally trigger simultaneous data hazards, load stalls, and branch flushes. 
+The processor was verified using a custom Verilog testbench and waveform analysis. The design was stressed against a specifically crafted machine code program (`program.hex`) designed to intentionally trigger simultaneous data hazards, load stalls, and branch flushes. 
 
 Cycle-by-cycle waveform analysis confirms the Hazard Unit successfully protects the pipeline, forwards correct data, and calculates the correct final register states.
 
