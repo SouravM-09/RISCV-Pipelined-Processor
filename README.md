@@ -1,6 +1,6 @@
 # 32-bit Pipelined RISC-V Processor 🚀
 
-**Author:** Sourav Mandal
+**Author:** Sourav Mandal  
 **Language:** Verilog HDL  
 **Simulation Tool:** Xilinx Vivado  
 
